@@ -23,12 +23,11 @@ inputs = [
 # тут ваше решение:
 for input in inputs:
     input_list = input.split(" ")
-    # number_list = list(map(int, input_list))
+    number_list = []
+    for string in input_list:
+        number_list.append(int(string))
     number_list = [int(string) for string in input_list]
-    a, x ,b, c = number_list
-    # a = int(input_list[0])
-    # x = int(input_list[1])
-    # b = int(input_list[2])
-    # c = int(input_list[3])
+    number_list = list(map(int, input_list))
+    a, x, b, c = number_list
     y = a*x*x + b*x + c
     print(y)
